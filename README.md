@@ -66,3 +66,47 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### Learning React Js
+1. componentDidMount
+
+2. componentDidUpdate(prevProps, prevState, snapshot)
+
+3. componentWillUnmount
+
+4. shouldComponentUpdate(nextProps, nextState)
+
+5. static getDerivedStateFromProps(props, state)
+
+6. getSnapshotBeforeUpdate(prevProps, prevState)
+
+### React Redux
+1. Nếu không sử dụng redux thì chúng ta sẽ có một mạng lưới các handle func được truyền từ component cha
+cho component con rồi component con dùng nó để update state của component cha.
+Khi 1 component cha có nhiều cấp component con thì khi 1 component con làm ảnh hưởng đến rất nhiều component
+con khác thì lúc đó xử lý sẽ rất phức tạp, rối loạn.
+
+2. Khi sử dụng redux thì redux sẽ đóng vai trò là store data trung gian giữa các component.
+Sẽ sử dụng và update state ở trong store. Khi một hành động làm thay đổi state của nhiều component
+thì chúng ta cũng chỉ cần set state cho store rồi từ đó store sẽ update xuống các component bị
+ảnh hưởng.
+
+3. ES6 Spread Operator - Toán tử ...: Toán tử để copy một object một cách nhanh chóng
+    sample:
+        var obj = {
+            name: 'abc',
+            age: 20
+        }
+
+        var obj2 = {...obj};
+
+4. Pure func: Tinh khiết
+    var add = (a, b) => a+b;
+    console.log(add(5,6));
+    - Không được có size defact: Không có hành động làm thay đổi các biến ngoài func
+    - Không được chứa các tác vụ bất đồng bộ(async task)
+    - Một input thì trả ra một kết quả output(là hằng số k đổi theo thời gian) mà thôi.
+
+5. Redux
+    Store = [reducers + state]
